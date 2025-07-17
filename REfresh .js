@@ -18,8 +18,8 @@ function rollDice() {
   var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
   // Build image file paths
-  var imageSource1 = "./images - Copy/dice" + randomNumber1 + ".png";
-  var imageSource2 = "./images - Copy/dice" + randomNumber2 + ".png";
+  var imageSource1 = "./Images/dice" + randomNumber1 + ".png";
+  var imageSource2 = "./Images/dice" + randomNumber2 + ".png";
 
   // Set images
   document.querySelector(".img1").setAttribute("src", imageSource1);
