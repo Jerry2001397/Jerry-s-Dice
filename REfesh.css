@@ -57,7 +57,7 @@ p {
 }
 
 img {
-  width: 80%;
+  width: 60%;
 }
 
 footer {
@@ -69,5 +69,5 @@ footer {
 }
 .container h2 {
   color: #4ECCA3;
-  font-size: 3rem;
+  font-size: 2rem;
 }
