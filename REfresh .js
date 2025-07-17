@@ -1,0 +1,39 @@
+// This script works with REfesh.html to display two random dice images and show the winner
+
+// Store player names
+let player1Name = "Player 1";
+let player2Name = "Player 2";
+
+// Prompt for names when page loads
+window.onload = function() {
+  player1Name = prompt("Enter Player 1 Name:", "Player 1") || "Player 1";
+  player2Name = prompt("Enter Player 2 Name:", "Player 2") || "Player 2";
+  document.querySelectorAll(".dice p")[0].textContent = player1Name;
+  document.querySelectorAll(".dice p")[1].textContent = player2Name;
+};
+
+function rollDice() {
+  // Generate random numbers for each dice (1-6)
+  var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+  var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+  // Build image file paths
+  var imageSource1 = "./images - Copy/dice" + randomNumber1 + ".png";
+  var imageSource2 = "./images - Copy/dice" + randomNumber2 + ".png";
+
+  // Set images
+  document.querySelector(".img1").setAttribute("src", imageSource1);
+  document.querySelector(".img2").setAttribute("src", imageSource2);
+
+  // Winner logic
+  if (randomNumber1 > randomNumber2) {
+    document.querySelector("h2").textContent = player1Name + " Wins!";
+  } else if (randomNumber2 > randomNumber1) {
+    document.querySelector("h2").textContent = player2Name + " Wins!";
+  } else {
+    document.querySelector("h2").textContent = "Draw!";
+  }
+}
+
+// Attach event listener to button
+document.getElementById("refreshBtn").addEventListener("click", rollDice);
