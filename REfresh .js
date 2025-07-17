@@ -27,11 +27,11 @@ function rollDice() {
 
   // Winner logic
   if (randomNumber1 > randomNumber2) {
-    document.querySelector("h2").textContent = player1Name + " Wins!";
+    document.querySelector("h3").textContent = player1Name + " Wins!";
   } else if (randomNumber2 > randomNumber1) {
-    document.querySelector("h2").textContent = player2Name + " Wins!";
+    document.querySelector("h3").textContent = player2Name + " Wins!";
   } else {
-    document.querySelector("h2").textContent = "Draw!";
+    document.querySelector("h3").textContent = "Draw!";
   }
 }
 
