@@ -49,3 +49,10 @@ document.getElementById("refreshBtn").addEventListener("click", rollDice);
       menuBox.classList.remove('show');
     }
   });
+  // Add this script to your HTML file, before </body>
+const menuBt = document.querySelector('.menu-btn');
+let colorIndex = 1;
+menuBtn.addEventListener('click', function() {
+  colorIndex = colorIndex % 4 + 1; // cycles 1-4
+  menuBtn.className = 'menu-btn color' + colorIndex;
+});

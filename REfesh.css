@@ -61,13 +61,19 @@
 .menu-box.show {
   display: block;
 }
-
+/* Add these styles for different color states */
+.menu-btn.color1 .menu-bar { background: #4ECCA3; }
+.menu-btn.color2 .menu-bar { background: #ccaf4e; }
+.menu-btn.color3 .menu-bar { background: #704ecc; }
+.menu-btn.color4 .menu-bar { background: #e94e77; }
+/* Add these styles for the dice */
 .dice {
   text-align: center;
   display: inline-block;
   margin: 50;
 
 }
+
 
 body {
   background-color: #393E46;
@@ -102,12 +108,12 @@ h3 {
   margin: 20px;
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
-  font-size: 8rem;
+  font-size: 5rem;
   color: #704ecc;
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #4ecca2;
   font-family: 'Indie Flower', cursive;
 }
