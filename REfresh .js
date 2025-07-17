@@ -37,3 +37,15 @@ function rollDice() {
 
 // Attach event listener to button
 document.getElementById("refreshBtn").addEventListener("click", rollDice);
+
+  const menuBtn = document.getElementById('menuBtn');
+  const menuBox = document.getElementById('menuBox');
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuBox.classList.toggle('show');
+  });
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !menuBox.contains(e.target)) {
+      menuBox.classList.remove('show');
+    }
+  });
